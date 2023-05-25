@@ -9,6 +9,7 @@ public class SideWall : MonoBehaviour
         if(collision.gameObject.tag == "Ball")
         {
             collision.gameObject.GetComponent<Ball>().RestartGame();
+            GameManager.instance.Score(transform.name);
         }
     }
 }

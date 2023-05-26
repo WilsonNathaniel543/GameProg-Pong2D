@@ -43,8 +43,8 @@ public class Ball : MonoBehaviour
         if (coll.collider.CompareTag("Player")) //jika terkena player
         {
             Vector2 vel;
-            vel.x = rb.velocity.x;
-            vel.y = (rb.velocity.y / 2) + (coll.collider.attachedRigidbody.velocity.y / 3); //mengambil nilai velocity player
+            vel.x = rb.velocity.x + 1f;
+            vel.y = (rb.velocity.y / 2) + (coll.collider.attachedRigidbody.velocity.y / 3) + 1f; //mengambil nilai velocity player
             rb.velocity = vel;
         }
     }
